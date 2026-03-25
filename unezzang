@@ -1,0 +1,56 @@
+# eunzzang<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Escape</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 시작 화면 -->
+<div id="startScreen">
+  <div>👉 터치해서 시작</div>
+</div>
+
+<!-- 카톡 UI -->
+<div id="kakao">
+  <div id="header">민교</div>
+  <div id="chat"></div>
+</div>
+
+<!-- 힌트 -->
+<div id="hint">힌트 (3)</div>
+
+<!-- 타이머 -->
+<div id="timer">30:00</div>
+
+<!-- 3D 공간 -->
+<a-scene>
+  <a-sky color="#000"></a-sky>
+
+  <!-- 방1 -->
+  <a-box id="door1" position="0 1 -3" color="red"></a-box>
+
+  <!-- 방2 -->
+  <a-box id="door2" position="3 1 -3" color="blue"></a-box>
+
+  <!-- 방3 -->
+  <a-box id="door3" position="-3 1 -3" color="green"></a-box>
+
+  <a-camera position="0 1.6 0"></a-camera>
+</a-scene>
+
+<!-- 사운드 -->
+<audio id="bgm" loop src="assets/bgm.mp3"></audio>
+<audio id="msgSound" src="assets/msg.mp3"></audio>
+<audio id="doorSound" src="assets/door.mp3"></audio>
+<audio id="scary" src="assets/scary.mp3"></audio>
+
+<script src="game.js"></script>
+
+</body>
+</html>
